@@ -26,10 +26,9 @@ y = np.load(features_path / "labels.npy")
 from pathlib import Path
 
 import numpy as np
-import scipy.sparse as sp
 
 features_path = Path("features/tf-idf")
-X = sp.load_npz(features_path / "features.npy")
+X = np.load_npz(features_path / "features.npy")
 y = np.load(features_path / "labels.npy")
 ```
 
@@ -45,9 +44,8 @@ For more details see [EmbeddingGemma model](https://huggingface.co/google/embedd
 from pathlib import Path
 
 import numpy as np
-import scipy.sparse as sp
 
 features_path = Path("features/vector-embeddings")
-X = sp.load_npz(features_path / "features.npy")
+X = np.load_npz(features_path / "features.npy")
 y = np.load(features_path / "labels.npy")
 ```
