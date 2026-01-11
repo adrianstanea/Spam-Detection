@@ -1,0 +1,11 @@
+,Model,Category,Embedding,Accuracy
+1,KNN,ML,vector-embeddings,0.982982982982983
+2,SVM,ML,vector-embeddings,0.9824824824824825
+3,XGBoost,ML,vector-embeddings,0.9724724724724725
+4,Logistic Regression,ML,vector-embeddings,0.9654654654654654
+5,Random Forest,ML,vector-embeddings,0.9594594594594594
+6,CNN,DL,vector-embeddings,0.953953953953954
+7,Naive Bayes,ML,vector-embeddings,0.913913913913914
+8,GRU,DL,vector-embeddings,0.7507507507507507
+9,LSTM,DL,vector-embeddings,0.7032032032032032
+10,CNN_LSTM,DL,vector-embeddings,0.6986986986986987
