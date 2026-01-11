@@ -1,0 +1,55 @@
+[project]
+name = "spam-detection"
+version = "0.1.0"
+description = "A FastAPI service for AI-based spam detection using Gemma embeddings"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Adrian Stanea", email = "adrianstanea1@gmail.com"}
+]
+
+dependencies = []
+
+[dependency-groups]
+dev = [
+    {include-group = "api"},
+    {include-group = "lint"},
+    {include-group = "test"},
+    {include-group = "notebook"},
+]
+api = [
+    "anyio>=4.12.1",
+    "fastapi>=0.128.0",
+    "joblib>=1.5.3",
+    "nltk>=3.9.2",
+    "pydantic>=2.12.5",
+    "scikit-learn>=1.8.0",
+    "sentence-transformers>=5.2.0",
+    "uvicorn>=0.40.0",
+]
+lint = [
+    "ruff>=0.14.11",
+]
+notebook = [
+    "matplotlib>=3.10.8",
+    "nltk>=3.9.2",
+    "numpy>=2.4.1",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.1",
+    "scikit-learn>=1.8.0",
+    "seaborn>=0.13.2",
+    "sentence-transformers>=5.2.0",
+    "wordcloud>=1.9.5",
+]
+test = [
+    "httpx>=0.28.1",
+    "pytest>=9.0.2",
+    "requests>=2.32.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
