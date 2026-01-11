@@ -1,0 +1,11 @@
+,Model,Category,Embedding,Accuracy
+1,SVM,ML,tf-idf-lsa,0.974974974974975
+2,XGBoost,ML,tf-idf-lsa,0.96996996996997
+3,Random Forest,ML,tf-idf-lsa,0.963963963963964
+4,KNN,ML,tf-idf-lsa,0.9574574574574575
+5,Logistic Regression,ML,tf-idf-lsa,0.9519519519519519
+6,CNN,DL,tf-idf-lsa,0.9414414414414415
+7,Naive Bayes,ML,tf-idf-lsa,0.8453453453453453
+8,LSTM,DL,tf-idf-lsa,0.7412412412412412
+9,CNN_LSTM,DL,tf-idf-lsa,0.6791791791791791
+10,GRU,DL,tf-idf-lsa,0.6036036036036037
