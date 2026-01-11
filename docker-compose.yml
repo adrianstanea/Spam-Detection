@@ -1,0 +1,40 @@
+services:
+  spam-api:
+    container_name: spam-api
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+      secrets:
+        - huggingface_hub_token
+    image: spam-api:app
+    restart: unless-stopped
+    ports:
+      - "9696:9696"
+    env_file:
+      - .spam-api.docker.env
+    volumes:
+      - huggingface-cache:/root/.cache/huggingface
+      - venv-cache:/code/.venv
+      - ./models:/code/models:ro
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://localhost:9696/docs || exit 1" ]
+      interval: 30s
+      timeout: 15s
+      retries: 3
+      start_period: 60s
+    networks:
+      - spam-api-net
+
+networks:
+  spam-api-net:
+    driver: bridge
+
+volumes:
+  huggingface-cache:
+    driver: local
+  venv-cache:
+    driver: local
+
+secrets:
+  huggingface_hub_token:
+    environment: HUGGINGFACE_HUB_TOKEN
