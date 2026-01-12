@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Usage: bash tests/test_app.sh
+# Usage: bash tests/test_api.sh
 
 API_HOST="${UVICORN_HOST:-localhost}"
 API_PORT="${UVICORN_PORT:-9696}"
